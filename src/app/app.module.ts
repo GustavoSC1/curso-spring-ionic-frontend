@@ -4,27 +4,32 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+//Decorator é uma anoatação que vai configurações para alterar a classe
 @NgModule({
+  //lista de componentes ou páginas que fazem parte desse módulo
   declarations: [
     MyApp,
-    HomePage,
-    ListPage
+    HomePage
   ],
+  //Lista de modulos que são importados por esse módulo
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
   ],
+  //Indica como a aplicação irá iniciar
   bootstrap: [IonicApp],
+  //Quando o declarations for uma página, e não apenas um componente, a mesma coisa que for declarada lá também
+  //tem que ser declarado aqui
   entryComponents: [
     MyApp,
-    HomePage,
-    ListPage
+    HomePage
   ],
+  //Vai ser declarada as classes que você quer que os objetos injetados dessas classes sejam uma instancia única 
+  //para este módulo
   providers: [
     StatusBar,
     SplashScreen,
@@ -32,3 +37,5 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ]
 })
 export class AppModule {}
+// No typescript quando você quer que uma classe ou qualquer outro elemento seja importado por outro arquivo
+//você tem que usar a palavra export
