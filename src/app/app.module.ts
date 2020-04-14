@@ -3,7 +3,6 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -12,8 +11,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   //lista de componentes ou páginas que fazem parte desse módulo
   declarations: [
-    MyApp,
-    HomePage
+    MyApp
   ],
   //Lista de modulos que são importados por esse módulo
   imports: [
@@ -25,8 +23,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   //Quando o declarations for uma página, e não apenas um componente, a mesma coisa que for declarada lá também
   //tem que ser declarado aqui
   entryComponents: [
-    MyApp,
-    HomePage
+    MyApp
   ],
   //Vai ser declarada as classes que você quer que os objetos injetados dessas classes sejam uma instancia única 
   //para este módulo
