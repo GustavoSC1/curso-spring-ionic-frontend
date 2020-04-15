@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from "@angular/common/http";
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
@@ -6,6 +7,7 @@ import { MyApp } from './app.component';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { CategoriaService } from '../services/domain/categoria.service';
 
 //Decorator é uma anoatação que vai configurações para alterar a classe
 @NgModule({
@@ -16,6 +18,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   //Lista de modulos que são importados por esse módulo
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
   ],
   //Indica como a aplicação irá iniciar
@@ -30,7 +33,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    CategoriaService
   ]
 })
 export class AppModule {}
