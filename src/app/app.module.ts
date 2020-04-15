@@ -9,6 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { CategoriaService } from '../services/domain/categoria.service';
 import { ErrorInterceptorProvider } from '../interceptors/error-interceptor';
+import { AuthService } from '../services/auth.service';
 
 //Decorator é uma anoatação que vai configurações para alterar a classe
 @NgModule({
@@ -36,7 +37,8 @@ import { ErrorInterceptorProvider } from '../interceptors/error-interceptor';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     CategoriaService,
-    ErrorInterceptorProvider
+    ErrorInterceptorProvider,
+    AuthService
   ]
 })
 export class AppModule {}
