@@ -6,7 +6,9 @@ import { API_CONFIG } from "../config/api.config";
 import { Config } from "ionic-angular";
 
 
-
+//Interceptor, como o próprio nome sugere, nos permite de forma bem simples interceptar e configurar 
+//requisições antes delas serem disparadas para o servidor.
+//https://medium.com/@cesarolvr/implementando-interceptor-para-requisi%C3%A7%C3%B5es-http-em-sua-aplica%C3%A7%C3%A3o-angular-4-5dba022dfcb1
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
 
