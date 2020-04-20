@@ -11,7 +11,7 @@
   <ion-list>
     <!--*ngFor - Essa diretiva é capaz de ler uma coleção do controlador e 
       repetir o elemento tantaz vezes for o elementos daquela coleção--> 
-    <button ion-item *ngFor="let item of items">
+    <button ion-item *ngFor="let item of items" (click)="showProdutos()">
       <ion-thumbnail item-start>
         <img src="{{bucketUrl}}/cat{{item.id}}.jpg">
       </ion-thumbnail>
