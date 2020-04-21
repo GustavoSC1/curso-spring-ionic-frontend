@@ -28,6 +28,7 @@ export class HomePage {
     error => {});
   }
 
+    //Quando entra na tela home ele verifica se o token armazenado ainda é valido, caso seja, pula diretamente para Categorias
   ionViewDidEnter(){
     this.auth.refreshToken()
     .subscribe(response => {
