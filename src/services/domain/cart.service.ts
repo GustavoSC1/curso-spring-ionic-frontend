@@ -26,8 +26,10 @@ export class CartService {
 
     addProduto(produto: ProdutoDTO) : Cart {
         let cart = this.getCart();
+        //Busca no carrinho se o produto já existe. Escontra a posição do elemento.
         let position = cart.items.findIndex(x => x.produto.id == produto.id);
         if(position == -1){
+            //Insere um elemento 
             cart.items.push({quantidade: 1, produto: produto});
         }
         this.storage.setCart(cart);
