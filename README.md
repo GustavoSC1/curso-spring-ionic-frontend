@@ -68,9 +68,6 @@ npm install
 
 # executar o projeto no navegador
 ionic cordova platform add browser --save
-
-# executar o projeto em um dispositivo conectado
-ionic cordova platform add android --save
 ```
 
 # Autor
