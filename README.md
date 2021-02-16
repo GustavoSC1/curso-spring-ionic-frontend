@@ -39,7 +39,7 @@ Para executar este projeto no modo de desenvolvimento, você precisará ter um a
     npm install -g ionic@3.19.0 cordova@7.1.0
    ```
     
-Além disso, você também pode utilizar o back-end rodando localmente em sua máquina com os dados fictícios. Você pode encontrar o back-end e todas as instruções para iniciá-lo [aqui] (https://github.com/GustavoSC1/cursomc). 
+Além disso, você também pode utilizar o back-end rodando localmente em sua máquina com os dados fictícios. Você pode encontrar o back-end e todas as instruções para iniciá-lo [aqui](https://github.com/GustavoSC1/cursomc). 
 
 ## Front end web
 Pré-requisitos: npm / yarn
